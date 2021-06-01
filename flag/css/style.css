@@ -1,0 +1,42 @@
+/*背景图片*/
+body {
+    margin: 0;
+    padding: 0;
+}
+.bg {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: url(../img/bg.png) repeat-x;
+    background-size: 100% 100%;
+}
+
+/*国旗*/
+.flag {
+    width: 40vw;
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+}
+
+/*升旗动画*/
+@keyframes raise {
+    100% {
+        bottom: 70%;
+    }
+}
+
+/*按钮*/
+.btn {
+    display: block;
+    background-color: #dc4d4f;
+    height: 65px;
+    width: 65px;
+    position: absolute;
+    top: 60%;
+    left: 20%;
+    padding: 0;
+    border-radius: 50%;
+    color: white;
+}

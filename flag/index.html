@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>flag</title>
+        <meta charset="utf-8">
+        <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="yes" name="apple-touch-fullscreen">
+        <meta content="telephone=no,email=no" name="format-detection">
+        <meta name="viewport"
+              content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+        <!-- 自定义样式 -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="bg">
+            <!-- 国旗 -->
+            <img class="flag" src="img/NationalFlag.gif" alt="flag">
+            <!-- 按钮 -->
+            <button class="btn" id="raise">升国旗</button>
+        </div>
+    </body>
+    <!-- jquery -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        var NationalAnthem = new Audio("js/NationalAnthem.wav");
+        $("#raise").on("touchend", function () {
+            //播放国歌
+            NationalAnthem.play();
+            //升国旗
+            $(".flag").css({
+                "animation": "raise linear 46s",
+                "animation-fill-mode": "forwards"
+            });
+        })
+    </script>
+</html>
